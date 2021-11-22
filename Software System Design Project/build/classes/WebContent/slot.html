@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Hospital</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="resource/js/angular_v1.6.0.js"></script>
+<script type="text/javascript">
+		function preback(){window.history.forward();}
+		setTimeout("preback()",0);
+		window.onunload=function(){null};
+
+	</script>
+	<script type="text/javascript" src="resource/js/admin.js"></script>
+	<link rel="stylesheet" type="text/css" href="Resources/Styles/slot.css">
+</head>
+<body >
+	<div ng-include="'allheader.html'"> </div>
+	
+	<main>
+
+		<div class="homeDescriptionContainer">
+			<h3>Manage Timings </h3>
+
+			<form name="slot" ng-controller="AdminController"  ng-submit="updateSlot()">
+			
+				Date <input type="date" ng-model="Appointment_Date" placeholder="yyyy-MM-dd" min="2019-11-01" max="2019-12-31" required><br><br>
+				<b>Delete the slot times when you are not available</b><br>
+				 <label><input type="radio" ng-model="slot" value="10:00"> 10:00 - 11:00</label>
+				 <label><input type="radio" ng-model="slot" value="11:00"> 11:00 - 12:00</label>
+                 <label><input type="radio" ng-model="slot" value="12:00"> 12:00 - 13:00</label>
+                 <label><input type="radio" ng-model="slot" value="14:00"> 14:00 - 15:00</label>
+                 <label><input type="radio" ng-model="slot" value="15:00"> 15:00 - 16:00</label>
+                 <label><input type="radio" ng-model="slot" value="16:00"> 16:00 - 17:00</label><br>
+				  
+				<button type="submit">Update slot</button>
+				<button type="submit" onclick="window.location.href = '/Original-SSDI/doctor.html'">Back</button><br>
+				<span style="color: green">{{message}}</span>				
+			</form>
+		</div>
+	</main>
+	<div ng-include="'footer.html'"> </div>
+</body>
+</html>
