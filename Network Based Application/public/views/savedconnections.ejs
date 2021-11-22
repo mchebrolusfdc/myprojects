@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>connectionsdetails</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="../assets/stylesheets/indexstyles.css">
+    </head>
+    <body>
+		<% include partials/header.ejs %>
+
+        <main>
+
+            <div class="savedconnectionsDescriptioncontainer">
+
+                <% if(userinfo.length>0) { %>
+                <div id="savedconnections"><h3><%= log.firstName %>'s connections</h3></div>
+                <div class="savedconnectionsitems">
+                  <table>
+                    <tr>
+                       <th>Connection</th>
+                       <th>Category</th>
+                       <th>Going? </th>
+                       <th></th>
+                    </tr>
+                    <%userinfo.forEach(function(c){ %>
+                    <tr>
+                       <td><%= c.connection.Name %></td>
+                       <td><%= c.connection.Topic %></td>
+                       <td><%= c.rsvp %></td>
+                       <td>
+                           <%if (c.connection.CreatedBy === log._id) {%>
+                           <button id="update" type="button" onclick="window.location.href= '/newConnection/update?connectionID=<%=c.connection._id%>';">Update</button>
+                           <% } else { %>
+                           <button id="update" type="button" onclick="window.location.href= '/connections?connectionID=<%=c.connection._id%>';">Update</button>
+                           <% } %>
+                           <button id="delete" type="button" onclick="window.location.href= '/savedconnections/delete?connectionID=<%=c.connection._id%>';">Delete</button>
+
+                       </td>
+                    </tr>
+                    <% }); %>
+                  </table>
+              </div>
+              <%}%>
+
+              <% if(userinfo.length == 0) { %>
+              <p id="connmsg"> There are no saved connections present, if you want to add connections, go to Connections  </p>
+                  <%}%>
+          <% if(newconn) {%>
+              <p id="hostmsg"> Connections created/owned by you </p>
+              <div class="savedconnectionsitems">
+                <table>
+                  <tr>
+                     <th>Connection</th>
+                     <th>Category</th>
+                     <th>Edit Connection</th>
+                  </tr>
+                  <%newconn.forEach(function(c){ %>
+                  <tr>
+                     <td><%= c.Name %></td>
+                     <td><%= c.Topic %></td>
+                     <td>
+
+                         <button id="update" type="button" onclick="window.location.href= '/newConnection/update?connectionID=<%=c._id%>';">Update</button>
+                         <button id="delete" type="button" onclick="window.location.href= '/savedconnections/delete?connectionID=<%=c._id%>';">Delete</button>
+
+                     </td>
+                  </tr>
+                  <% }); %>
+                </table>
+            </div>
+            <%}%>
+            </div>
+        </main>
+        <% include partials/footer %>
+    </body>
+</html>

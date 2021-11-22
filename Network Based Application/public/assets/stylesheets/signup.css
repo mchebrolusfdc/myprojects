@@ -1,0 +1,72 @@
+.signup {
+	width: 65%;
+	padding-top:2%;
+	padding-bottom:2%;
+	margin-left: 15%;
+
+}
+
+#signupform {
+  width: 600px;
+  height:500px;
+  max-width: 100%;
+  padding: 4px;
+  margin: 5px auto;
+	margin-top: 8%;
+	margin-left:55%;
+	background-color:lightgrey;
+}
+
+.signup tr{
+	text-align: center;
+	margin-top: 40px;
+}
+
+.signup tr td{
+	padding: 0.5%;
+	border: none;
+}
+#button {
+
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+	margin-top: 30px;
+	margin-left: 40%;
+	font-size: 13px;
+	width: 65px;
+	height:30px;
+	background-color: lightgreen;
+}
+h4{
+	text-align: center;
+}
+
+#errmessage {
+  color: brown;
+  font-weight: bold;
+	height: 10px;
+	text-align:center;
+  padding-top: 10px;
+}
+.main{
+	height:620px;
+	width:300%
+	display: block;
+	margin-left:10px;margin-top:5px;
+	font-family:Aleo Regular,Palatino Linotype,Palatino;
+	float: left;
+	font-size: 16px;
+}
+.signup input[type ='text'],  input[type ='email'],  input[type ='password'],  input[type ='number'],select{
+
+  	margin: 5px ;
+  	padding: 4px;
+  	width: 110%;
+  	height:25px;
+   border: 1px ;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

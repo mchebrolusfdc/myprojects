@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Sports</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/indexstyles.css">
+          <link rel="stylesheet" type="text/css" href="../assets/stylesheets/signup.css">
+    </head>
+    <body>
+        <% include partials/header %>
+        <% if (message){ %>
+          <p id="errmessage"> <%= message %> </p>
+        <% } %>
+        <main class="main">
+          <form id="signupform" method="POST" action="/signup">
+            <h4> Registration</h4>
+      			<table class="signup">
+              <tbody>
+      					<tr>
+                  <td> First Name</td>
+      						<td> <input type="text" name="firstName"  required> </td>
+      					</tr>
+                <tr>
+                   <td>Last Name</td>
+                   <td><input type="text" name="lastName"> </td>
+                </tr>
+                <tr>
+                   <td>Email ID</td>
+                   <td><input type="text" name="email" required> </td>
+                </tr>
+                <tr>
+                   <td>Password</td>
+                   <td><input type="password" name="password" required> </td>
+
+                </tr>
+                <tr>
+                   <td>Confirm Password</td>
+                   <td><input type="password" name="conpassword" required> </td>
+                </tr>
+                <tr>
+                   <td>Address</td>
+                   <td><input type="text" name="address" required> </td>
+                </tr>
+                <tr>
+                   <td>City</td>
+                   <td><input type="text" name="city" required> </td>
+                </tr>
+                <tr>
+                   <td>State</td>
+                   <td><input type="text" name="state" required> </td>
+                </tr>
+                <tr>
+                   <td>Country</td>
+                   <td><input type="text" name="country" required> </td>
+                </tr>
+              </tbody>
+      			</table>
+            <input id="button" type="Submit" value="Submit"/>
+          </form>
+    	</main>
+      <% include partials/footer.ejs%>
+
+  </body>
+</html>

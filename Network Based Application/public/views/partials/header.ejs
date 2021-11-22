@@ -1,0 +1,29 @@
+<header>
+	<div class="header">
+			<a href="/index"><img src="../assets/images/logo.png" alt="image"/></a>
+            <h1>Charlotte Sports Community</h1>
+  </div>
+  			<div class="userspecific">
+
+                <a  href="/newconnection">Start a new Connection</a>
+								<% if(log != undefined){ %>
+								<a  href="/logout">Logout</a>
+                <a  href="/savedconnections">My connections</a>
+								<%} else{%>
+								<a  href="/login">Login</a>
+                <a  href="/signup">Sign Up</a>
+								<% } %>
+        </div>
+
+         <div class="generalsite">
+
+                <a href="/index">Home</a>
+                <a href="/connections">Connections</a>
+                <a href="/about">About Us</a>
+                <div id="welcomemsg">
+								<% if(log != undefined){ %>
+                <p>Welcome <%= log.firstName %>!</p>
+								<% } %>
+         </div>
+	</div>
+</header>

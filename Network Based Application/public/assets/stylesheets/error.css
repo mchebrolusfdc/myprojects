@@ -1,0 +1,22 @@
+
+p {padding:2%;}
+p a{text-decoration: none; color:blue;}
+.errorpage {
+
+    height: 420px;
+    display: block;
+    margin-left:10px;margin-top:5px;
+    font-family:Aleo Regular,Palatino Linotype,Palatino;
+    float: left;
+    font-size: 16px;
+}
+
+#msg{
+
+  text-align:center;
+  padding-left: 400px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  color: red;
+}

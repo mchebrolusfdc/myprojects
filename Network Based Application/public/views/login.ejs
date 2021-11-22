@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Sports</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/indexstyles.css">
+          <link rel="stylesheet" type="text/css" href="../assets/stylesheets/login.css">
+    </head>
+    <body>
+        <% include partials/header %>
+        <% if (message){ %>
+          <p id="errmessage"> <%= message %> </p>
+        <% } %>
+        <main class="main">
+          <form id="loginform" method="POST" action="/login">
+            <h4> Login Page</h4>
+      			<table class="login">
+              <tbody>
+      					<tr>
+                  <td class="col1"> Username</td>
+      						<td class="col2"> <input type="text" name="username"  required> </td>
+      					</tr>
+                <tr>
+                  <td class="col1"> Password</td>
+                  <td class="col2"> <input type="password" name="password" required> </td>
+                </tr>
+              </tbody>
+      			</table>
+            <input id="button" type="Submit" value="Login"/>
+          </form>
+    	</main>
+      <% include partials/footer.ejs%>
+
+  </body>
+</html>

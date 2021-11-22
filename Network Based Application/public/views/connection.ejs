@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Sportsdetail</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/indexstyles.css">
+    </head>
+    <body>
+        <% include partials/header.ejs %>
+        <main>
+            <div class="connectionDescriptioncontainer">
+                <div class="basketballdetails">
+                <div class="basketballdescription">
+                <h3><%= data.Name%> Event</h3>
+                <div class="connectionimage">
+                <img src= "<%= data.Image%>" alt="image1" />
+                </div>
+                <div class="connectioncontent">
+                    <p><b>Hosted by</b> <%= data.HostedBy%> </p>
+                    <p><b>Date: </b> <%= data.Date%> </p>
+                    <p><b>Time: </b><%= data.Time%></p>
+                    <p><b>Venue: </b><%= data.Address%></p>
+                </div>
+                </div>
+
+                <div class="productdetailscontainer">
+                    <h4> DETAILS </h4>
+                    <p> <% data.Description.forEach(function(info){%> </p>
+                    <p> <%= info %> </p>
+                    <% }); %>
+
+                </div>
+                </div>
+                <div class="buttonaction">
+                    <p id="going">Are you going? <%=data.Going%> people going <p>
+
+               <div class="Action">
+
+                   <form method="POST" action="/savedconnections?connectionID=<%= data._id %>&rsvp=Yes">
+                      <button id="yes">Yes</button>
+                   </form>
+                   <form method="POST" action="/savedconnections?connectionID=<%= data._id %>&rsvp=No">
+                      <button id="No">No</button>
+                   </form>
+                  <form method="POST" action="/savedconnections?connectionID=<%= data._id %>&rsvp=Maybe">
+                      <button id="maybe">May be </button>
+                  </form>
+               </div>
+               </div>
+
+            </div>
+        </main>
+         <% include partials/footer.ejs %>
+
+    </body>
+</html>

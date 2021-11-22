@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>newconnection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheets/indexstyles.css">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheets/newConnection.css">
+    </head>
+    <body>
+         <% include partials/header %>
+         <% if(message) {%>
+         <p id="message"> <%= message %> </p>
+         <%}%>
+      <main class="main">
+      	<% if(!connection){ %>
+      <form id="connectionform" method="POST" action="/newConnection">
+      <table>
+        <tr>
+            <td>Name</td>
+            <td> <input type="text" name="Name" class="input" placeholder="Name" maxlength="50" required> </td>
+
+        </tr>
+        <tr>
+            <td>Topic</td>
+            <td>
+              <select class="dropdown" name="Topic" placeholder="Topic">
+                <option value="">--Select--</option>
+                <option value="IndoorSports">IndoorSports</option>
+                <option value="RecreationalSports">RecreationalSports</option>
+                <option value="OutdoorSports">OutdoorSports</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Details</td>
+            <td> <textarea id="Details" name="Description" placeholder="Description" maxlength="300"></textarea></td>
+        </tr>
+        <tr>
+            <td>Where</td>
+            <td> <input type="text" class="input" name="Address" placeholder="Eg: 6200 David Taylor Road, Charlotte" maxlength="50" required> </td>
+        </tr>
+        <tr>
+            <td>When</td>
+            <td> <input type="date" class="input" name="Date" required placeholder= "Date format should be as Ex: 09 October 2019" /> </td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td> <input type="time" class="input" name="Time" required placeholder= "Time should be as Ex:11:00 PM - 3:00 PM"/> </td>
+        </tr>
+        </table>
+          <input id="submit-btn" type="submit" value="Create Connection"/>
+
+        </form>
+         <% } else { %>
+           <form id="connectionform" method="POST" action="/newConnection?connectionID=<%= connection._id %>">
+           <table>
+             <tr>
+                 <td>Name</td>
+                 <td> <input type="text" name="Name" class="input" value="<%= connection.Name %>" maxlength="50" required> </td>
+
+             </tr>
+             <tr>
+                 <td>Topic</td>
+                 <td>
+                   <select  name="Topic" placeholder="Topic">
+                     <option value="<%= connection.Topic %>"><%= connection.Topic %></option>
+                   </select>
+                 </td>
+             </tr>
+             <tr>
+                 <td>Details</td>
+                 <td> <textarea id="Details" name="Description"  maxlength="300"><%=connection.Description %></textarea></td>
+             </tr>
+             <tr>
+                 <td>Where</td>
+                 <td> <input type="text" class="input" name="Address"  value="<%= connection.Address %>" maxlength="50" required> </td>
+             </tr>
+             <tr>
+                 <td>When</td>
+                 <td> <input type="date" class="input" name="Date" value="<%= connection.Date %>" required  /> </td>
+             </tr>
+             <tr>
+                 <td>Time</td>
+                 <td> <input type="time" class="input" name="Time" value="<%= connection.Time %>" required  />  </td>
+             </tr>
+             </table>
+               <input id="submit-btn" type="submit" value="Update Connection" />
+
+             </form>
+             <% } %>
+      </main>
+
+		  <% include partials/footer %>
+    </body>
+</html>

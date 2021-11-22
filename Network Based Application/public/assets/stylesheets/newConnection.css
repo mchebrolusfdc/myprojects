@@ -1,0 +1,52 @@
+#connectionform {
+  width: 400px;
+  height:402px;
+  max-width: 100%;
+  padding: 4px;
+  margin: 5px auto;
+}
+#connectionform  input,textarea{
+  display: block;
+  margin: 10px ;
+  padding: 4px;
+  width: 150%;
+}
+	#connectionform  input[type='submit']{
+  width: auto
+}
+	#connection, #going, #hostedby, #userid, #image{
+		visibility:collapse;
+	}
+	table {
+
+		table-layout: fixed;
+		width: 100%;
+		padding-top:2%;
+	}
+	table, tr, td {
+    border: none;
+}
+#submit-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+  height:30px;
+  padding: 10px;
+}
+#message {
+  padding-left: 500px;
+  color: brown;
+  margin-top:1px;
+  font-weight: bold;
+}
+
+.dropdown{
+  padding-left: 30px;
+  margin-left: 10px;
+  height: 23px;
+}
