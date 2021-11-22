@@ -1,0 +1,151 @@
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac > #alignmentBox {
+  position: relative;
+  max-width: 375px;
+  max-height: 812px;
+  width: 100%;
+  height: 100%;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 > .backgroundLayer {
+  height: calc(100% + 0px);
+  width: calc(100% + 0px);
+  background-color: #6ACCCB;
+  background-repeat: repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-attachment: scroll;
+  background-size: auto;
+  background-image: none;
+  box-shadow: none;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 {
+  position: absolute;
+  width: 375px;
+  height: 812px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  text-shadow: none;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  line-height: 18px;
+  font-size: 10.0pt;
+  font-family: 'Roboto-Regular',Arial;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 > .clipping, #s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 > .paddingLayer {
+  height: 812px;
+  width: 375px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 .valign {
+  vertical-align: middle;
+  text-align: center;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 span {
+  color: #434343;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto-Regular',Arial;
+  font-size: 10.0pt;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Rectangle_1 span#rtr-s-Rectangle_1_0 {
+  color: #434343;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto-Regular',Arial;
+  font-size: 10.0pt;
+  line-height: 0px;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label > .backgroundLayer {
+  height: calc(100% + 0px);
+  width: calc(100% + 0px);
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label {
+  position: absolute;
+  width: auto;
+  height: auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  text-shadow: none;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  font-size: 18.0pt;
+  font-family: 'Lucida Calligraphy',Arial;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label > .clipping, #s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label > .paddingLayer {
+  height: calc(100% + 0px);
+  width: calc(100% + 0px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label .valign {
+  vertical-align: middle;
+  text-align: left;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label span {
+  color: #333333;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Lucida Calligraphy',Arial;
+  font-size: 18.0pt;
+  font-style: normal;
+  font-weight: 400;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Label span#rtr-s-Label_0 {
+  color: #333333;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Lucida Calligraphy',Arial;
+  font-size: 18.0pt;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Loading_1 {
+  position: absolute;
+  width: 50px;
+  height: 49px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Loading_1 > img, #s-57ab6d02-4ff7-40df-92f1-554958a86cac #s-Loading_1 > svg {
+  height: 49px;
+  width: 50px;
+  box-shadow: none;
+}
+.devMobile #jim-container .ui-page {
+  overflow-x: hidden;
+}
+.non_jim_mobile #simulation {
+  overflow-x: hidden;
+}
+.web #simulation {
+  overflow-x: hidden;
+}
+#s-57ab6d02-4ff7-40df-92f1-554958a86cac > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}
