@@ -1,0 +1,79 @@
+Student Name: Mounika Chebrolu
+Student ID: 801149350
+Email ID: mchebrol@uncc.edu
+
+Lempel–Ziv–Welch (LZW) algorithm
+The Lempel–Ziv–Welch (LZW) algorithm is a lossless data compression algorithm. LZW is an adaptive compression algorithm that does not assume prior knowledge of the input data distribution. 
+This algorithm has two steps:
+1. Encoding/Compressing
+2. Decoding/Decompressing
+
+Program design:
+Encoding:
+
+- Start with importing the required modules.
+- Input file and bit length should be given as arguments in the command line which can be done using args[0] and args[1] respectively.
+- Initialize table size to 256 as it already contains 0-255 ASCII characters and max table size to 2^bitlength and string s to null.
+- Read the input from the file and store it in str, check if str is not null then assign a character at a time to symbol using the for loop.
+- Check if s+symbol is in hash table then assign s+symbol to s, otherwise get the key from hashtable for that string and write it into the output file.
+- Check if the table is not full by comparing table size and max table size. If so, add to the table with string s and symbol, and assign string to symbol.
+- Write the output code of the string to the file in UTF-16BE format.
+
+Decoding:
+
+- Start with importing the required modules.
+- Input file and bit length should be given as arguments in the command line which can be done using args[0] and args[1] respectively.
+- Initialize table size to 256 as it already contains 0-255 ASCII characters and max table size to 2^bitlength and string s to null.
+- Read code from the input file and assign it to code, get the key from the hash table for the code and store it in s and write it into the output file using while loop.
+- Read the next code from the file and check if the code is defined in the table, if so, append s and first character of s and assign it to new_string.
+- Otherwise get the key from the hash table for the code and store it in new_string and write it into the output file.
+- Check if the table is not full by comparing table size and max table size. If so, append string s and first character of new string, and add it to the table.
+- Then assign new_string to string.  
+
+
+Data Structure design:
+The data structure used for the implementation of this algorithm is "Hash table" , which already has the 1-character sequences encoded in the table along with their ASCII values.
+Hash table provides direct access to its items. It easily computes the hash code of the key and uses it to store the value.
+
+Files:
+There are 2 files
+a) encoding.java
+In encoding.java, the given input file(.txt format) is encoded and the compressed file is generated as output which is of .lzw format.
+
+b) decoding.java 
+In decoding.java, the encoded file(.lzw format) is taken as input and it is decoded and the decompressed file is generated as output which is in the text format.
+
+What works?
+
+The encoding program takes the input in .txt format and generates the output in .lzw format and it is saved in 16 bit format (using UTF-16BE character encoding) and it works for any different inputs.
+The decoding program takes the input in .lzw format and generates the output in .txt format and the output is stored in a file named <Input File Name without extension> + "_decoded.txt"
+Inputs provided in the canvas are tested and getting the similar outputs as in canvas.
+
+Programming Language:
+
+Java programming language has been used to implement the algorithm.
+
+Compiler version: javac 13.0.1
+
+How to run the program:
+
+- first compile the program using the below command:
+  javac yourfilename.java
+  eg: javac encoding.java
+      javac decoding.java
+
+- Then, run the program using the command below
+  java yourfilename inputfilename bitlength
+  eg: java encoding.java input1.txt 12
+      java decoding.java input1.lzw 12
+
+Two command line arguments need to be passed, inputfilename (the file that you need to encode/compress) and the bitlength (it defines maximum table size and it should be longer than that of characters)
+
+
+
+
+
+
+
+
+
